@@ -37,6 +37,12 @@ a,
 nav, 
 .nav-links{
     display: flex;
+    position: fixed;
+    width: 80%;
+    top:0;
+    background-color: white; 
+    z-index: 1000; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -44,11 +50,6 @@ nav {
     justify-content: space-around;
     align-items: center;
     height: 17vh;
-    position: fixed;
-    width: 100%;
-    background-color: white; 
-    z-index: 1000; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 section {
     padding-top: 20vh;
