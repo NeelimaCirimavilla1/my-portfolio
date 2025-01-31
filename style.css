@@ -36,8 +36,9 @@ a,
 
 nav, 
 .nav-links{
-    display: flex; 
-    }
+    display: flex;
+    position:fixed;
+}
 
 nav {
     justify-content: space-around;
