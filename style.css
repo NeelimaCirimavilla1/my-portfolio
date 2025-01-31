@@ -37,7 +37,7 @@ a,
 nav, 
 .nav-links{
     display: flex;
-    position: fixed;
+    position: sticky;
 }
 
 nav {
