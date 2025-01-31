@@ -38,14 +38,14 @@ nav,
 .nav-links{
     display: flex;
     position: fixed;
-    width: 80%;
+    width: 70%;
     top:0;
+    right:0;
     background-color: white; 
     z-index: 1000; 
     }
 
 nav {
-    display: flex;
     justify-content: space-around;
     align-items: center;
     height: 17vh;
