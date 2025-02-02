@@ -471,111 +471,96 @@ article {
 
 /* PROJECTS SECTION */
 
-/* Project Section Styling */
+/* Projects Section Container */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Responsive grid with auto-fill and min-width of 300px */
+    gap: 20px;  /* Space between project tiles */
+    margin: 20px 0;  /* Top and bottom margin for spacing */
+}
+
+/* Individual Project Tile */
 .project {
-    background-color: #f9f9f9;  /* Light background for contrast */
-    border-radius: 8px;
+    background-color: #ffffff;  /* White background for projects */
+    border-radius: 10px;  /* Rounded corners for each project tile */
     padding: 20px;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
-    width: 100%; /* Ensure project fills full width */
-    max-width: 100%; /* Allow project to take the entire width */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+    display: flex;
+    flex-direction: column;  /* Stack content vertically */
+    justify-content: space-between;
+    text-align: center;
 }
 
-/* Hover Effect */
-.project:hover {
-    transform: scale(1.02); /* Slightly enlarge the card */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-    background-color: #ffffff; /* Change background to white */
-    cursor: pointer; /* Pointer cursor to indicate interactivity */
+/* Project Image */
+.project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Rounded image corners */
+    object-fit: cover;  /* Prevent image stretching */
+    margin-bottom: 15px;
 }
 
-/* Project Title and Points Styling */
+/* Project Title Styling */
 .project-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
     color: #333;
     margin-bottom: 10px;
 }
 
-.project-points {
-    margin: 10px 0;
-}
-
-.project-points li {
+/* Project Description Styling */
+.project-description {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
-/* Button Styling */
+/* Project Button Styling */
 .project-btn {
-    margin-top: 10px;
-    background-color: #007bff; /* Blue background */
-    color: #fff;
+    background-color: #007bff;  /* Blue background for button */
+    color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
     transition: background-color 0.3s ease;
 }
 
 /* Button Hover Effect */
 .project-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;  /* Darker blue on hover */
 }
 
-/* Projects Container */
-.projects-container {
-    display: block; /* Ensure projects come one by one */
-    width: 100%;  /* Take full width of the page */
-    margin: 20px 0; /* Space above and below the projects */
+/* Hover Effect for Project Tile */
+.project:hover {
+    transform: translateY(-10px);  /* Lift the project card slightly */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
 }
 
-/* Individual Project Tile */
-.project {
-    width: 100%;  /* Each project fills the entire container */
-    max-width: 100%;  /* Ensure it stretches across */
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 300px;  /* Set a minimum height for uniformity */
-    text-align: center;  /* Center content */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Project Text Hover Effect */
+.project:hover .project-title, 
+.project:hover .project-description {
+    color: #007bff;  /* Change text color on hover */
 }
 
-/* Project Section */
-#projects {
-    position: relative;
-    width: 100%;
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;  /* Single column layout on smaller screens */
+    }
+
+    .project {
+        text-align: left;  /* Align text to the left on small screens */
+    }
+
+    .project-img {
+        margin-bottom: 10px;  /* Reduce space for images on smaller screens */
+    }
 }
 
-/* Color Container */
-.color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
-}
-
-/* Project Image */
-.project-img {
-    border-radius: 2rem;
-    width: 60%;
-    height: 60%;
-    object-fit: cover; /* Prevent image distortion */
-}
-
-/* Project Title */
-.project-title {
-    margin: 1rem;
-    color: black;
-}
-
-/* Project Button */
-.project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
-}
 
 /* CONTACT */
 
