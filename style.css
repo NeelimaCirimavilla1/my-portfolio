@@ -40,7 +40,6 @@ nav,
     display: flex;
     position:fixed;
     top:0;
-    left:0;
     right:0;
     width:100%;
     background-color:white;
@@ -187,8 +186,8 @@ section {
 
 .section__pic-container {
     display: flex;
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 400px;
     margin: auto 0;
 }
 
@@ -480,13 +479,13 @@ article {
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for the card */
-    width: 100%; /* Ensure equal width for all tiles */
-    max-width: 350px; /* Prevent excessive stretching */
+    width: 100%; /* Ensure project fills full width */
+    max-width: 100%; /* Allow project to take the entire width */
 }
 
 /* Hover Effect */
 .project:hover {
-    transform: scale(1.05); /* Slightly enlarge the card */
+    transform: scale(1.02); /* Slightly enlarge the card */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow */
     background-color: #ffffff; /* Change background to white */
     cursor: pointer; /* Pointer cursor to indicate interactivity */
@@ -528,29 +527,28 @@ article {
 
 /* Projects Container */
 .projects-container {
-    display: flex;                   /* Use flexbox for layout */
-    flex-wrap: wrap;                 /* Allow wrapping for responsiveness */
-    justify-content: space-between;  /* Space out the projects */
-    gap: 20px;                       /* Provide spacing between project tiles */
-    margin: 20px 0;                  /* Space above and below the projects */
+    display: block; /* Ensure projects come one by one */
+    width: 100%;  /* Take full width of the page */
+    margin: 20px 0; /* Space above and below the projects */
 }
 
 /* Individual Project Tile */
 .project {
-    flex: 1 1 calc(33.333% - 20px);  /* Ensure three tiles per row with spacing */
-    max-width: 350px;                /* Prevent tiles from getting too wide */
+    width: 100%;  /* Each project fills the entire container */
+    max-width: 100%;  /* Ensure it stretches across */
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    min-height: 300px;                /* Set a minimum height for uniformity */
-    text-align: center;               /* Center content */
+    min-height: 300px;  /* Set a minimum height for uniformity */
+    text-align: center;  /* Center content */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Project Section */
 #projects {
     position: relative;
+    width: 100%;
 }
 
 /* Color Container */
