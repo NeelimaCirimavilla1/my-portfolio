@@ -35,21 +35,18 @@ a,
 
 /* DESKTOP NAV */
 
-nav, 
-.nav-links{
-    display: flex;
-    justify-content:space-between;
+nav,
+nav {
+    display:flex;
     position:fixed;
     top:0;
-    width:100%;
+    right:0;
+    width:100;
     background-color:white;
     z-index: 1000;
     height: 12vh;
     padding: 0 20px;
-}
-
-nav {
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 17vh;
 }
@@ -58,6 +55,7 @@ nav {
     gap: 2rem;
     list-style: none;
     font-size: 1.5rem;
+    display:flex;
 }
 
 a {
@@ -477,10 +475,9 @@ article {
 
 #projects {
     width: 100%;
-    max-width: 800px; /* Center content and restrict width */
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding: 40px 20px;
 }
 
