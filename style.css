@@ -474,50 +474,62 @@ article {
 /* PROJECTS SECTION */
 
 /* Projects Section Container */
-#projects {
-    width: 100%;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Light gray background */
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+}
+
+/* Projects Section */
+#projects {
+    width: 100%;
+    max-width: 800px; /* Center content and restrict width */
+    display: flex;
     flex-direction: column;
-    padding: 40px 0;
+    align-items: center;
+    padding: 40px 20px;
 }
 
 /* Projects Section Container */
 .projects-container {
-    display: grid;
-    grid-template-columns: 1fr;  /* Single column layout */
-    gap: 20px;  /* Space between project tiles */
+    display: flex;
+    flex-direction: column; /* Stack projects one by one */
+    gap: 30px;  /* Space between project tiles */
     width: 100%;
-    max-width: 600px; /* Prevents excessive width */
 }
 
 /* Individual Project Tile */
 .project {
-    background-color: #ffffff;  /* White background */
-    border-radius: 10px;  /* Rounded corners */
-    padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
-    transition: all 0.3s ease;  /* Smooth transition */
+    background-color: #fff;  /* White background */
+    border-radius: 12px;  /* Smooth rounded corners */
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);  /* Elegant shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column;  /* Stack content */
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    width: 100%;
 }
 
 /* Project Image */
 .project-img {
-    width: 100%;
+    width: 90%;
     height: auto;
-    border-radius: 10px;  /* Rounded image corners */
-    object-fit: cover;  /* Prevent image stretching */
+    border-radius: 10px;  /* Rounded corners */
+    object-fit: cover;
     margin-bottom: 15px;
 }
 
 /* Project Title Styling */
 .project-title {
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: 700;
     color: #333;
     margin-bottom: 10px;
 }
@@ -525,8 +537,9 @@ article {
 /* Project Description Styling */
 .project-description {
     font-size: 1rem;
-    color: #666;
-    margin-bottom: 15px;
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 15px;
 }
 
 /* Project Button Styling */
@@ -535,42 +548,47 @@ article {
     color: white;
     border: none;
     padding: 12px 20px;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 600;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 /* Button Hover Effect */
 .project-btn:hover {
-    background-color: #0056b3;  /* Darker blue on hover */
+    background-color: #0056b3;  /* Darker blue */
+    transform: scale(1.05);
 }
 
 /* Hover Effect for Project Tile */
 .project:hover {
-    transform: translateY(-10px);  /* Lift the project card */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* Stronger shadow */
+    transform: translateY(-10px);  /* Lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);  /* Stronger shadow */
 }
 
 /* Project Text Hover Effect */
 .project:hover .project-title, 
 .project:hover .project-description {
-    color: #007bff;  /* Change text color on hover */
+    color: #007bff;  /* Change text color */
 }
 
-/* Responsive Styling */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .projects-container {
-        width: 90%;
+    #projects {
+        max-width: 90%;
     }
 
     .project {
-        text-align: left;  /* Align text to the left */
+        padding: 20px;
     }
 
-    .project-img {
-        margin-bottom: 10px;
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
     }
 }
 
