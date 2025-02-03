@@ -196,7 +196,7 @@ section {
 .circle-image{
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 10%
 }
 
@@ -474,22 +474,33 @@ article {
 /* PROJECTS SECTION */
 
 /* Projects Section Container */
+#projects {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+/* Projects Section Container */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));  /* Responsive grid with auto-fill and min-width of 300px */
+    grid-template-columns: 1fr;  /* Single column layout */
     gap: 20px;  /* Space between project tiles */
-    margin: 20px 0;  /* Top and bottom margin for spacing */
+    width: 100%;
+    max-width: 600px; /* Prevents excessive width */
 }
 
 /* Individual Project Tile */
 .project {
-    background-color: #ffffff;  /* White background for projects */
-    border-radius: 10px;  /* Rounded corners for each project tile */
+    background-color: #ffffff;  /* White background */
+    border-radius: 10px;  /* Rounded corners */
     padding: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
-    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    transition: all 0.3s ease;  /* Smooth transition */
     display: flex;
-    flex-direction: column;  /* Stack content vertically */
+    flex-direction: column;  /* Stack content */
     justify-content: space-between;
     text-align: center;
 }
@@ -520,7 +531,7 @@ article {
 
 /* Project Button Styling */
 .project-btn {
-    background-color: #007bff;  /* Blue background for button */
+    background-color: #007bff;  /* Blue background */
     color: white;
     border: none;
     padding: 12px 20px;
@@ -538,8 +549,8 @@ article {
 
 /* Hover Effect for Project Tile */
 .project:hover {
-    transform: translateY(-10px);  /* Lift the project card slightly */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+    transform: translateY(-10px);  /* Lift the project card */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* Stronger shadow */
 }
 
 /* Project Text Hover Effect */
@@ -551,18 +562,17 @@ article {
 /* Responsive Styling */
 @media screen and (max-width: 768px) {
     .projects-container {
-        grid-template-columns: 1fr;  /* Single column layout on smaller screens */
+        width: 90%;
     }
 
     .project {
-        text-align: left;  /* Align text to the left on small screens */
+        text-align: left;  /* Align text to the left */
     }
 
     .project-img {
-        margin-bottom: 10px;  /* Reduce space for images on smaller screens */
+        margin-bottom: 10px;
     }
 }
-
 
 /* CONTACT */
 
